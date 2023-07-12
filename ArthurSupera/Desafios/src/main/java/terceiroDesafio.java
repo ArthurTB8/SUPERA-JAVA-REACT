@@ -2,39 +2,42 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class terceiroDesafio {
-    public static int countPairsWithDiff(int[] arr, int k) {
-        HashSet<Integer> set = new HashSet<>();
-        int count = 0;
+    public static int contarParesComDiferenca(int[] vetor, int k) {
+        HashSet<Integer> conjunto = new HashSet<>();
+        int contador = 0;
 
-        for (int num : arr) {
-            int target1 = num - k;
-            int target2 = num + k;
+        for (int num : vetor) {
+            int alvo1 = num - k;
+            int alvo2 = num + k;
 
-            if (set.contains(target1)) {
-                count++;
+            if (conjunto.contains(alvo1)) {
+                contador++;
             }
 
-            if (set.contains(target2)) {
-                count++;
+            if (conjunto.contains(alvo2)) {
+                contador++;
             }
 
-            set.add(num);
+            conjunto.add(num);
         }
 
-        return count;
+        return contador;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt(); 
-        int k = scanner.nextInt(); 
 
-        int[] arr = new int[n];
+        int n = scanner.nextInt();
+        int k = scanner.nextInt();
+
+        int[] vetor = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt(); 
+            vetor[i] = scanner.nextInt();
         }
 
-        int result = countPairsWithDiff(arr, k);
-        System.out.println(result);
+        int resultado = contarParesComDiferenca(vetor, k);
+        System.out.println(resultado);
+
+        scanner.close();
     }
 }
