@@ -1,6 +1,6 @@
-#<p align="center">SUPERA-JAVA-REACT</p>
+<p align="center">SUPERA-JAVA-REACT</p>
 
-##Desafios
+#Desafios
 
 - PRIMEIRO DESAFIO
 
